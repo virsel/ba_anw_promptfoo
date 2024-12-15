@@ -22,22 +22,20 @@ Afterwards, you can view the results by running `promptfoo view`
 ## results
 
 v1   
-- normal nezha result lists
-4o-mini:    91.07% passing (51/56 cases)
-4o:         96.43% passing (54/56 cases)
+- normal nezha result lists  
+    4o-mini:    91.07% passing (51/56 cases)  
+    4o:         96.43% passing (54/56 cases)
 
 
 v2  
-- modified nezha result list -> error logs werden priorisiert 
-
-4o-mini:    92.86% passing (52/56 cases)
-4o:         96.43% passing (54/56 cases)
+- modified nezha result list -> error logs werden priorisiert   
+    4o-mini:    92.86% passing (52/56 cases)  
+    4o:         96.43% passing (54/56 cases)  
 
 
 v2 mit promptänderung  
-- with metrics
-
-4o-mini:    96.43% passing (54/56 cases)
-4o:         98.21% passing (55/56 cases)
+- with metrics  
+    4o-mini:    96.43% passing (54/56 cases)  
+    4o:         98.21% passing (55/56 cases)
 
 

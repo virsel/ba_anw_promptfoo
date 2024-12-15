@@ -1,0 +1,42 @@
+You are a root cause engineer. 
+Based on following information you must choose the exact root cause of a problem in a unhealthy system.
+List of possible Root Causes:
+{
+cpu_usage,
+network_delay,
+code_bug
+}
+Please be aware that its a multiservice architecture so the root cause happens in one of many possible pods.
+So its possible that indicative metric anomalies only appear in one pod.
+The Code Bug root cause can either be a raised exception or an unexpected return. 
+
+By comparing logs, traces and metrics of an unhealthy system with its older healthy version event patterns are extracted programmatically.
+Based on occurencies of this patterns a deviation between older healthy and current unhealthy system is extracted.
+The result contains a ranked list of deviation via a Deviation Score.
+
+Each pattern comes with additional information.
+These are the common attributes:
+- Deviation Score
+    Interpretation: 
+        The score range is from 0.5 to 1.0
+        A score closer to 1.0 indicates high deviation between older healthy system and current unhealthy system.
+        A score closer to 0.5 indicates low deviation between older healthy system and current unhealthy system.
+- Event Depth: The Depth of the Event Trace pattern inside the total request trace
+- Affected Pod: The Pod in the unhealthy System state which is affected by a problem
+- The Trace of 2 consecutive Events 
+    - one time from perspektive of a fokused system (can be the healthy or unhealthy system) and one time the counterpart Trace instead appeared in the referenzed system (can be the healthy or unhealthy system)
+
+This is the ranked result list with healthy system fokused and unhealthy system referenced (So Deviation of 1.0 means events appeared more often in healthy system): 
+{{expected_moreoften}}
+
+This is the ranked result list with unhealthy system fokused and healthy system referenced: 
+{{actual_moreoften}}
+
+The Pattern with highest Deviation score and ranking is not necessarily the actual root cause. 
+
+Answer with one word by choosing one root cause from this list:
+[
+cpu_usage,
+network_delay,
+code_bug
+]

@@ -4,6 +4,8 @@ $env:OPENAI_API_KEY="Ihr_API_Schlüssel"
 nachgucken mit:
 echo $env:OPENAI_API_KEY
 
+promptfoo eval --output filepath.json
+
 
 Einen Blick in prompts.txt und promptfooconfig.yaml werfen. Insbesondere welche CSV genutzt wird!
 

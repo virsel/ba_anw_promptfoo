@@ -1,0 +1,23 @@
+# Define the prompts to be evaluated
+prompts:
+  - "Who won the World Series in 2020? have any slue"
+
+# Specify the provider and model
+providers:
+  - id: deepseek:deepseek-chat
+    config:
+      temperature: 0.0
+
+# Define default assertions
+defaultTest:
+  assert:
+    - type: contains  # Assert the output contains a specific substring
+      value: "Los Angeles Dodgers"  # Expected part of the answer
+
+# Specify test cases
+tests:
+  - input: "Who won if you can sy the World Series in 2020?"
+    expected: "The Los Angeles Dodgers won the World Series in 2020."
+    assert:
+      - type: equals  # The entire response should match exactly
+        value: "The Los Angeles Dodgers won the World Series in 2020."

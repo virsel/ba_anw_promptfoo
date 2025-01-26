@@ -1,0 +1,45 @@
+actual_moreoften,expected_moreoften,root_cause
+"Pattern on Rank 1:
+Deviation Score: 1.00 = a big anomaly.
+Event Depth: 1
+Affected Pod: frontend-579b9bff58-t2dbm
+Event Comparison:
+  Event Trace Pattern in current fokused System:
+    From: (frontend hipstershopFrontendRecv start)
+    To: (CpuUsageRate Alarm)
+  Event Trace Pattern appeared in referenced System:
+    From: (frontend hipstershopFrontendRecv start)
+    To: (Request started)
+
+Pattern on Rank 2:
+Deviation Score: 0.55 = a minor anomaly.
+Event Depth: 3
+Affected Pod: currencyservice-cf787dd48-vpjrd
+Event Comparison:
+  Event Trace Pattern in current fokused System:
+    From: (Received conversion request)
+    To: (currencyservice hipstershopCurrencyServiceGetCurrencyData start)
+  Event Trace Pattern appeared in referenced System:
+    From: (Received conversion request)
+    To: (Conversion request successful)
+","Pattern on Rank 1:
+Deviation Score: 1.00 = a big anomaly.
+Event Depth: 1
+Affected Pod: frontend-579b9bff58-t2dbm
+Event Comparison:
+  Event Trace Pattern in current fokused System:
+    From: (frontend hipstershopFrontendRecv start)
+    To: (Request started)
+  Event Trace Pattern appeared in referenced System:
+    From: (frontend hipstershopFrontendRecv start)
+    To: (CpuUsageRate Alarm)
+
+Pattern on Rank 2:
+Deviation Score: 0.70 = a moderate anomaly.
+Event Depth: 2
+Affected Pod: currencyservice-cf787dd48-vpjrd
+Event Comparison:
+  Event Trace Pattern in current fokused System:
+    From: (currencyservice grpchipstershopCurrencyServiceConvert start)
+    To: (currencyservice hipstershopCurrencyServiceCarry start)
+",cpu_usage

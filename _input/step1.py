@@ -5,8 +5,8 @@ import re
 
 # get abs path of the file
 abs_path = Path(__file__).resolve().parent
-data_path = abs_path / 'features_labeled_4llm_v2.csv'
-data_outpath = abs_path / 'step1_v2.csv'
+data_path = abs_path / 'features_labeled_4llm_vnew.csv'
+data_outpath = abs_path / 'step1_vnew.csv'
 
 
 def main():

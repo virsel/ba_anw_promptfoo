@@ -2,7 +2,7 @@
 #test2.csv hat "alles" was von der Datenvorverarbeitung übergeben wird.
 #test4.csv wurde via Script erzeugt (transform_to_llm_prompt.py) und fasst zusammengehörige INjects zu einem Datensazu zusammen
 prompts:
-  - file://prompts.txt
+  - file://prompts_withoutmetrics.txt
 providers:
 #  - openai:gpt-3.5-turbo-1106
 #  - openai:gpt-4o-mini
@@ -15,7 +15,7 @@ defaultTest:
       value: file://../assert.py
 
 tests: 
-  - file://../_abvariation/test_v1.csv
+  - file://../_abvariation/test_v1old.csv
   # - options:
   #     runSerially: true
 

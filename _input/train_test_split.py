@@ -3,9 +3,9 @@ import pandas as pd
 
 # get abs path of the file
 abs_path = Path(__file__).resolve().parent
-data_path = abs_path / 'step1_v2.csv'
-train_outpath = abs_path / 'train_v2.csv'
-test_outpath = abs_path / 'test_v2.csv'
+data_path = abs_path / 'step1_vnew.csv'
+train_outpath = abs_path / 'train_vnew.csv'
+test_outpath = abs_path / 'test_vnew.csv'
 
 def main():
     df = pd.read_csv(data_path)

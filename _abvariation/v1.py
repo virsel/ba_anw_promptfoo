@@ -5,8 +5,8 @@ import json
 
 # get abs path of the file
 abs_path = Path(__file__).resolve().parent
-data_path = abs_path / '../_input/train_v1.csv'
-data_outpath = abs_path / 'train_v1.csv'
+data_path = abs_path / '../_input/test_v1.csv'
+data_outpath = abs_path / 'test_v1old.csv'
 
 def main():
     df = pd.read_csv(data_path)
@@ -56,14 +56,15 @@ def resultlist_2_prompt(event_patterns):
     max_patterns = 5
     for idx, pattern in enumerate(event_patterns, 1):
         if max_patterns < 1:
-            event_str = ' '.join(pattern['events'])
-            if 'events_inreferenz' in pattern:
-                event_str += ' '.join(pattern['events_inreferenz'])
-            event_str = event_str.lower()
-            if any(indicator in event_str for indicator in err_indicators):
-                print(event_str)
-            else:
-                continue
+            # event_str = ' '.join(pattern['events'])
+            # if 'events_inreferenz' in pattern:
+            #     event_str += ' '.join(pattern['events_inreferenz'])
+            # event_str = event_str.lower()
+            # if any(indicator in event_str for indicator in err_indicators):
+            #     print(event_str)
+            # else:
+            #     continue
+            continue
         # Basic pattern description
         prompt += f"Pattern on Rank {idx}:\n"
         # Score interpretation
